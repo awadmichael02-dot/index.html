@@ -175,38 +175,89 @@ h1{
 
 @media(max-width:799px){
 
+  html,
   body{
-    padding:60px 10px 10px;
+    width:100%;
+    min-height:100%;
+  }
+
+  body{
+    padding:48px 8px 8px;
+    overflow:hidden;
+  }
+
+  .app{
+    width:100%;
+    max-width:none;
   }
 
   h1{
-    font-size:27px;
+    font-size:24px;
+    margin:0 0 6px;
   }
 
   .camera{
-    padding:12px;
+    padding:7px;
+    margin-bottom:7px;
+    border-radius:12px;
   }
 
   .camera h2{
-    font-size:22px;
+    font-size:18px;
+    margin:0;
+  }
+
+  .ip{
+    font-size:10px;
+    margin-bottom:4px;
+  }
+
+  /* Smaller live preview */
+  .preview-wrap{
+    width:55%;
+    max-width:280px;
+    margin:0 auto 3px;
+    border-radius:8px;
+  }
+
+  .preview{
+    width:100%;
+    aspect-ratio:16/9;
+  }
+
+  /* Hide extra text to save space */
+  .preview-note{
+    display:none;
   }
 
   .columns{
-    gap:7px;
+    gap:4px;
   }
 
   .column{
-    gap:7px;
+    gap:4px;
   }
 
   .preset{
-    font-size:15px;
-    min-height:82px;
-    padding:7px;
+    min-height:52px;
+    height:52px;
+    padding:4px;
+    border-radius:9px;
+    font-size:12px;
   }
 
   .number{
-    font-size:11px;
+    display:none;
+  }
+
+  .status{
+    min-height:14px;
+    margin-top:3px;
+    font-size:10px;
+  }
+
+  .footer{
+    display:none;
   }
 }
 
