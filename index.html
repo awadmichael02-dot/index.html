@@ -183,27 +183,23 @@ h1{
   }
 
   body{
-    padding:48px 6px 6px;
+    padding:8px 6px 6px;
   }
 
   .app{
     width:100%;
-    height:calc(100dvh - 54px);
+    height:calc(100dvh - 14px);
     max-width:none;
     display:grid;
     grid-template-rows:auto 1fr 1fr;
     gap:5px;
   }
 
-  /* HEADER */
-
   h1{
     font-size:21px;
     line-height:1;
     margin:0 0 2px;
   }
-
-  /* CAMERA CARDS */
 
   .camera{
     min-height:0;
@@ -227,8 +223,6 @@ h1{
     margin-bottom:2px;
   }
 
-  /* COMPACT CAMERA PREVIEW */
-
   .preview-wrap{
     width:42%;
     max-width:210px;
@@ -246,8 +240,6 @@ h1{
   .preview-note{
     display:none;
   }
-
-  /* PRESET AREA */
 
   .columns{
     flex:1;
@@ -282,6 +274,18 @@ h1{
 
   .footer{
     display:none;
+  }
+}
+
+/* Extra top space ONLY when installed as a Home Screen app */
+@media(max-width:799px) and (display-mode:standalone){
+
+  body{
+    padding:48px 6px 6px;
+  }
+
+  .app{
+    height:calc(100dvh - 54px);
   }
 }
 
