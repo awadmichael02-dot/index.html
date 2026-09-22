@@ -170,7 +170,7 @@ h1{
 
 
 /* =========================
-   PHONE / TABLET PORTRAIT
+   iPHONE PORTRAIT
    ========================= */
 
 @media(max-width:799px){
@@ -183,32 +183,29 @@ h1{
   }
 
   body{
-    padding:8px 6px 6px;
+    padding:48px 6px 6px;
   }
 
   .app{
     width:100%;
-    height:calc(100dvh - 14px);
     max-width:none;
-    display:grid;
-    grid-template-rows:auto 1fr 1fr;
-    gap:5px;
+    display:block;
   }
 
   h1{
     font-size:21px;
     line-height:1;
-    margin:0 0 2px;
+    margin:0 0 7px;
   }
 
   .camera{
+    width:100%;
+    height:auto;
     min-height:0;
-    height:100%;
     padding:6px;
-    margin:0;
+    margin:0 0 5px;
     border-radius:11px;
-    display:flex;
-    flex-direction:column;
+    display:block;
   }
 
   .camera h2{
@@ -220,13 +217,14 @@ h1{
   .ip{
     font-size:9px;
     line-height:1;
-    margin-bottom:2px;
+    margin-bottom:3px;
   }
 
+  /* Compact preview */
   .preview-wrap{
     width:42%;
     max-width:210px;
-    margin:0 auto 2px;
+    margin:0 auto 3px;
     border-radius:7px;
   }
 
@@ -241,13 +239,16 @@ h1{
     display:none;
   }
 
+  /* Preset buttons */
   .columns{
-    flex:1;
-    min-height:0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
     gap:3px;
   }
 
   .column{
+    display:flex;
+    flex-direction:column;
     gap:3px;
   }
 
@@ -267,7 +268,7 @@ h1{
   .status{
     min-height:11px;
     height:11px;
-    margin-top:2px;
+    margin-top:3px;
     font-size:9px;
     line-height:1;
   }
@@ -277,15 +278,11 @@ h1{
   }
 }
 
-/* Extra top space ONLY when installed as a Home Screen app */
+/* Extra safe-area space when installed as Home Screen app */
 @media(max-width:799px) and (display-mode:standalone){
 
   body{
-    padding:48px 6px 6px;
-  }
-
-  .app{
-    height:calc(100dvh - 54px);
+    padding-top:48px;
   }
 }
 
