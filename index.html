@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1,
+               viewport-fit=cover">
 
 <link rel="manifest" href="./manifest.json">
 <link rel="apple-touch-icon" href="./apple-touch-icon.png">
@@ -15,18 +18,29 @@
 <title>Church Cameras</title>
 
 <style>
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
 *{
   box-sizing:border-box;
 }
 
+html,
 body{
   margin:0;
-  padding:16px;
+  padding:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   background:#f3f3f3;
 }
 
+body{
+  padding:16px;
+}
+
 .app{
+  width:100%;
   max-width:1400px;
   margin:auto;
 }
@@ -35,6 +49,10 @@ h1{
   text-align:center;
   font-size:30px;
   margin:0 0 18px;
+}
+
+.camera-container{
+  display:block;
 }
 
 .camera{
@@ -57,6 +75,11 @@ h1{
   font-size:14px;
   margin-bottom:15px;
 }
+
+
+/* =========================================================
+   CAMERA PREVIEW
+   ========================================================= */
 
 .preview-wrap{
   width:75%;
@@ -83,6 +106,11 @@ h1{
   margin-top:6px;
 }
 
+
+/* =========================================================
+   PRESET BUTTONS
+   ========================================================= */
+
 .columns{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -96,7 +124,6 @@ h1{
   gap:12px;
 }
 
-/* Base button */
 .preset{
   border:0;
   border-radius:15px;
@@ -107,7 +134,7 @@ h1{
   box-shadow:0 2px 6px rgba(0,0,0,.12);
   cursor:pointer;
   padding:12px;
-  transition:transform .08s ease, filter .08s ease;
+  transition:transform .08s ease,filter .08s ease;
 }
 
 .preset:active{
@@ -123,7 +150,9 @@ h1{
   margin-top:6px;
 }
 
+
 /* LEFT = BLUE */
+
 .left{
   background:#dceeff;
   border:2px solid #4da3ff;
@@ -133,7 +162,9 @@ h1{
   background:#cde7ff;
 }
 
+
 /* CENTER = GREEN */
+
 .center{
   background:#dcf7e5;
   border:2px solid #42b86b;
@@ -143,7 +174,9 @@ h1{
   background:#cef0da;
 }
 
+
 /* RIGHT = RED */
+
 .right{
   background:#ffe0e0;
   border:2px solid #ef6262;
@@ -152,6 +185,11 @@ h1{
 .right:hover{
   background:#ffd2d2;
 }
+
+
+/* =========================================================
+   STATUS / FOOTER
+   ========================================================= */
 
 .status{
   text-align:center;
@@ -169,11 +207,12 @@ h1{
 }
 
 
-/* =========================
-   iPHONE PORTRAIT
-   ========================= */
+/* =========================================================
+   IPHONE PORTRAIT
+   ========================================================= */
 
-@media(max-width:799px){
+@media (max-width:799px)
+       and (orientation:portrait){
 
   html,
   body{
@@ -183,13 +222,12 @@ h1{
   }
 
   body{
-    padding:48px 6px 6px;
+    padding:8px 6px 6px;
   }
 
   .app{
     width:100%;
     max-width:none;
-    display:block;
   }
 
   h1{
@@ -200,12 +238,9 @@ h1{
 
   .camera{
     width:100%;
-    height:auto;
-    min-height:0;
     padding:8px;
     margin:0 0 7px;
     border-radius:12px;
-    display:block;
   }
 
   .camera h2{
@@ -220,7 +255,6 @@ h1{
     margin-bottom:3px;
   }
 
-  /* Compact preview */
   .preview-wrap{
     width:50%;
     max-width:240px;
@@ -229,7 +263,6 @@ h1{
   }
 
   .preview{
-    display:block;
     width:100%;
     aspect-ratio:16/9;
     height:auto;
@@ -239,7 +272,6 @@ h1{
     display:none;
   }
 
-  /* Preset buttons */
   .columns{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -247,8 +279,6 @@ h1{
   }
 
   .column{
-    display:flex;
-    flex-direction:column;
     gap:5px;
   }
 
@@ -278,8 +308,14 @@ h1{
   }
 }
 
-/* Extra safe-area space when installed as Home Screen app */
-@media(max-width:799px) and (display-mode:standalone){
+
+/* =========================================================
+   IPHONE PORTRAIT — STANDALONE HOME SCREEN APP
+   ========================================================= */
+
+@media (max-width:799px)
+       and (orientation:portrait)
+       and (display-mode:standalone){
 
   body{
     padding-top:20px;
@@ -287,453 +323,12 @@ h1{
 }
 
 
-/* =========================
-   iPAD LANDSCAPE MODE
-   ========================= */
-
-@media(min-width:800px) and (orientation:landscape){
-
-  html,
-  body{
-    width:100%;
-    height:100%;
-    overflow:hidden;
-  }
-
-  body{
-    padding:12px;
-  }
-
-  .app{
-    width:100%;
-    height:100%;
-    max-width:1500px;
-    display:flex;
-    flex-direction:column;
-  }
-
-  h1{
-    flex:0 0 auto;
-    font-size:26px;
-    margin:0 0 10px;
-  }
-
-  /* Two cameras side by side */
-  .camera-container{
-    flex:1;
-    min-height:0;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-  }
-
-  .camera{
-    min-width:0;
-    min-height:0;
-    height:100%;
-    margin:0;
-    padding:12px;
-    display:flex;
-    flex-direction:column;
-  }
-
-  .camera h2{
-    font-size:21px;
-    margin:0;
-  }
-
-  .ip{
-    font-size:12px;
-    margin-bottom:7px;
-  }
-
-  .preview-wrap{
-  width:75%;
-  max-width:560px;
-  margin:0 auto 5px;
-  border-radius:10px;
-}
-
-  .preview{
-    height:155px;
-    aspect-ratio:auto;
-    object-fit:contain;
-  }
-
-  .preview-note{
-    font-size:11px;
-    margin:0 0 5px;
-  }
-
-  .columns{
-    flex:1;
-    min-height:0;
-    gap:7px;
-  }
-
-  .column{
-    gap:7px;
-  }
-
-  .preset{
-    min-height:0;
-    height:70px;
-    padding:6px;
-    font-size:14px;
-    border-radius:11px;
-  }
-
-  .number{
-    font-size:10px;
-    margin-top:3px;
-  }
-
-  .status{
-    flex:0 0 auto;
-    min-height:18px;
-    margin-top:5px;
-    font-size:12px;
-  }
-
-  .footer{
-    display:none;
-  }
-}
-
-
-/* =========================
-   iPAD EXTRA LARGE LANDSCAPE
-   ========================= */
-
-@media(min-width:1100px) and (orientation:landscape){
-
-  body{
-    padding:16px;
-  }
-
-  h1{
-    font-size:28px;
-    margin-bottom:12px;
-  }
-
-  .camera{
-    padding:14px;
-  }
-
-  .camera h2{
-    font-size:23px;
-  }
-
-  .preview{
-    height:180px;
-  }
-
-  .preset{
-    height:74px;
-    font-size:15px;
-  }
-
-  .number{
-    font-size:11px;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<div class="app">
-
-<h1>Church Cameras</h1>
-
-<div class="camera-container">
-
-<!-- =========================
-     NEW CHURCH CAMERA
-     ========================= -->
-
-<section class="camera">
-
-<h2>New Church Camera</h2>
-
-<div class="ip">
-192.168.10.30
-</div>
-
-<div class="preview-wrap">
-  <img
-    class="preview"
-    id="new-preview"
-    alt="New Church Camera live view">
-</div>
-
-<div class="preview-note">
-Live preview
-</div>
-
-<div class="columns">
-
-  <!-- LEFT -->
-  <div class="column">
-
-    <button
-      class="preset left"
-      onclick="recall('new',10)">
-      Left Altar
-      <span class="number">Preset 10</span>
-    </button>
-
-    <button
-      class="preset left"
-      onclick="recall('new',16)">
-      Left Altar Gospel
-      <span class="number">Preset 16</span>
-    </button>
-
-    <button
-      class="preset left"
-      onclick="recall('new',13)">
-      Left Altar Sermon
-      <span class="number">Preset 13</span>
-    </button>
-
-  </div>
-
-
-  <!-- CENTER -->
-  <div class="column">
-
-    <button
-      class="preset center"
-      onclick="recall('new',5)">
-      Main Altar
-      <span class="number">Preset 5</span>
-    </button>
-
-    <button
-      class="preset center"
-      onclick="recall('new',9)">
-      Main Gospel
-      <span class="number">Preset 9</span>
-    </button>
-
-    <button
-      class="preset center"
-      onclick="recall('new',1)">
-      Main Altar Sermon
-      <span class="number">Preset 1</span>
-    </button>
-
-  </div>
-
-
-  <!-- RIGHT -->
-  <div class="column">
-
-    <button
-      class="preset right"
-      onclick="recall('new',11)">
-      Right Altar
-      <span class="number">Preset 11</span>
-    </button>
-
-  </div>
-
-</div>
-
-<div id="new-status" class="status">
-Ready
-</div>
-
-</section>
-
-
-<!-- =========================
-     OLD CHURCH CAMERA
-     ========================= -->
-
-<section class="camera">
-
-<h2>Old Church Camera</h2>
-
-<div class="ip">
-192.168.10.28
-</div>
-
-<div class="preview-wrap">
-  <img
-    class="preview"
-    id="old-preview"
-    alt="Old Church Camera live view">
-</div>
-
-<div class="preview-note">
-Live preview
-</div>
-
-<div class="columns">
-
-  <!-- LEFT -->
-  <div class="column">
-
-    <button
-      class="preset left"
-      onclick="recall('old',4)">
-      Main
-      <span class="number">Preset 4</span>
-    </button>
-
-  </div>
-
-
-  <!-- CENTER -->
-  <div class="column">
-
-    <button
-      class="preset center"
-      onclick="recall('old',9)">
-      Gospel
-      <span class="number">Preset 9</span>
-    </button>
-
-  </div>
-
-
-  <!-- RIGHT -->
-  <div class="column">
-
-    <button
-      class="preset right"
-      onclick="recall('old',1)">
-      Sermon
-      <span class="number">Preset 1</span>
-    </button>
-
-  </div>
-
-</div>
-
-<div id="old-status" class="status">
-Ready
-</div>
-
-</section>
-
-</div>
-
-<div class="footer">
-Panasonic PTZ Camera Control
-</div>
-
-</div>
-
-
-<script>
-
-const cameras={
-  new:{
-    ip:"192.168.10.30",
-    status:"new-status"
-  },
-
-  old:{
-    ip:"192.168.10.28",
-    status:"old-status"
-  }
-};
-
-
-const previewFeeds={
-  new:{
-    ip:"192.168.10.30",
-    element:"new-preview"
-  },
-
-  old:{
-    ip:"192.168.10.28",
-    element:"old-preview"
-  }
-};
-
-
-/* =========================
-   CAMERA PREVIEW
-   ========================= */
-
-function refreshPreview(which){
-
-  const feed=previewFeeds[which];
-
-  const img=document.getElementById(feed.element);
-
-  img.src=
-    `http://${feed.ip}/cgi-bin/camera?resolution=640x360&quality=standard&${Date.now()}`;
-}
-
-
-function startPreviews(){
-
-  Object.keys(previewFeeds).forEach(which=>{
-
-    refreshPreview(which);
-
-    setInterval(
-      ()=>refreshPreview(which),
-      1000
-    );
-
-  });
-
-}
-
-startPreviews();
-
-
-/* =========================
-   PRESET RECALL
-   ========================= */
-
-function recall(which,n){
-
-  const cam=cameras[which];
-
-  const code=
-    String(n-1).padStart(2,"0");
-
-  const url=
-    `http://${cam.ip}/cgi-bin/aw_ptz?cmd=%23R${code}&res=1`;
-
-  document.getElementById(
-    cam.status
-  ).textContent=
-    `Calling preset ${n}...`;
-
-  const img=new Image();
-
-  img.onload=()=>{
-    document.getElementById(
-      cam.status
-    ).textContent=
-      `Preset ${n} sent.`;
-  };
-
-  img.onerror=()=>{
-    document.getElementById(
-      cam.status
-    ).textContent=
-      `Preset ${n} sent.`;
-  };
-
-  img.src=
-    url+
-    `&t=${Date.now()}`;
-}
-
-  /* =========================
-   iPHONE LANDSCAPE
-   ========================= */
-
-@media (orientation:landscape) and (max-height:600px){
+/* =========================================================
+   IPHONE LANDSCAPE
+   ========================================================= */
+
+@media (max-width:799px)
+       and (orientation:landscape){
 
   html,
   body{
@@ -761,7 +356,6 @@ function recall(which,n){
     margin:0 0 4px;
   }
 
-  /* Two cameras side-by-side */
   .camera-container{
     flex:1;
     min-height:0;
@@ -796,7 +390,6 @@ function recall(which,n){
     margin-bottom:2px;
   }
 
-  /* Small centered preview */
   .preview-wrap{
     flex:0 0 auto;
     width:42%;
@@ -809,14 +402,12 @@ function recall(which,n){
     width:100%;
     height:auto;
     aspect-ratio:16/9;
-    display:block;
   }
 
   .preview-note{
     display:none;
   }
 
-  /* Buttons use remaining space */
   .columns{
     flex:1;
     min-height:0;
@@ -859,6 +450,508 @@ function recall(which,n){
     display:none;
   }
 }
+
+
+/* =========================================================
+   IPAD / LARGE TABLET LANDSCAPE
+   ========================================================= */
+
+@media (min-width:800px)
+       and (orientation:landscape){
+
+  html,
+  body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+  }
+
+  body{
+    padding:8px;
+  }
+
+  .app{
+    width:100%;
+    height:calc(100dvh - 16px);
+    max-width:1500px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+  }
+
+  h1{
+    flex:0 0 auto;
+    font-size:24px;
+    line-height:1;
+    margin:0 0 6px;
+  }
+
+  .camera-container{
+    flex:1;
+    min-height:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+  }
+
+  .camera{
+    min-width:0;
+    min-height:0;
+    height:100%;
+    margin:0;
+    padding:9px;
+    display:flex;
+    flex-direction:column;
+    overflow:hidden;
+    border-radius:14px;
+  }
+
+  .camera h2{
+    flex:0 0 auto;
+    font-size:20px;
+    line-height:1;
+    margin:0 0 2px;
+  }
+
+  .ip{
+    flex:0 0 auto;
+    font-size:11px;
+    line-height:1;
+    margin-bottom:4px;
+  }
+
+  .preview-wrap{
+    flex:0 0 auto;
+    width:55%;
+    max-width:420px;
+    margin:0 auto 3px;
+    border-radius:9px;
+  }
+
+  .preview{
+    width:100%;
+    height:auto;
+    aspect-ratio:16/9;
+    object-fit:contain;
+  }
+
+  .preview-note{
+    flex:0 0 auto;
+    font-size:10px;
+    margin:0 0 4px;
+  }
+
+  .columns{
+    flex:1;
+    min-height:0;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:5px;
+  }
+
+  .column{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    min-height:0;
+  }
+
+  .preset{
+    flex:1;
+    min-height:0;
+    height:auto;
+    padding:4px;
+    border-radius:9px;
+    font-size:13px;
+    line-height:1.05;
+  }
+
+  .number{
+    font-size:9px;
+    margin-top:2px;
+  }
+
+  .status{
+    flex:0 0 auto;
+    min-height:14px;
+    height:14px;
+    margin-top:3px;
+    font-size:10px;
+    line-height:1;
+  }
+
+  .footer{
+    display:none;
+  }
+}
+
+
+/* =========================================================
+   LARGE COMPUTER LANDSCAPE
+   ========================================================= */
+
+@media (min-width:1200px)
+       and (orientation:landscape){
+
+  .app{
+    max-width:1500px;
+  }
+
+  h1{
+    font-size:28px;
+  }
+
+  .camera{
+    padding:14px;
+  }
+
+  .camera h2{
+    font-size:23px;
+  }
+
+  .preview-wrap{
+    width:55%;
+    max-width:500px;
+  }
+
+  .preset{
+    font-size:15px;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="app">
+
+<h1>Church Cameras</h1>
+
+<div class="camera-container">
+
+
+<!-- =====================================================
+     NEW CHURCH CAMERA
+     ===================================================== -->
+
+<section class="camera">
+
+<h2>New Church Camera</h2>
+
+<div class="ip">
+192.168.10.30
+</div>
+
+<div class="preview-wrap">
+
+<img
+  class="preview"
+  id="new-preview"
+  alt="New Church Camera live view">
+
+</div>
+
+<div class="preview-note">
+Live preview
+</div>
+
+
+<div class="columns">
+
+
+<!-- LEFT PRESETS -->
+
+<div class="column">
+
+<button
+  class="preset left"
+  onclick="recall('new',10)">
+  Left Altar
+  <span class="number">Preset 10</span>
+</button>
+
+<button
+  class="preset left"
+  onclick="recall('new',16)">
+  Left Altar Gospel
+  <span class="number">Preset 16</span>
+</button>
+
+<button
+  class="preset left"
+  onclick="recall('new',13)">
+  Left Altar Sermon
+  <span class="number">Preset 13</span>
+</button>
+
+</div>
+
+
+<!-- CENTER PRESETS -->
+
+<div class="column">
+
+<button
+  class="preset center"
+  onclick="recall('new',5)">
+  Main Altar
+  <span class="number">Preset 5</span>
+</button>
+
+<button
+  class="preset center"
+  onclick="recall('new',9)">
+  Main Gospel
+  <span class="number">Preset 9</span>
+</button>
+
+<button
+  class="preset center"
+  onclick="recall('new',1)">
+  Main Altar Sermon
+  <span class="number">Preset 1</span>
+</button>
+
+</div>
+
+
+<!-- RIGHT PRESETS -->
+
+<div class="column">
+
+<button
+  class="preset right"
+  onclick="recall('new',11)">
+  Right Altar
+  <span class="number">Preset 11</span>
+</button>
+
+</div>
+
+</div>
+
+
+<div id="new-status" class="status">
+Ready
+</div>
+
+</section>
+
+
+<!-- =====================================================
+     OLD CHURCH CAMERA
+     ===================================================== -->
+
+<section class="camera">
+
+<h2>Old Church Camera</h2>
+
+<div class="ip">
+192.168.10.28
+</div>
+
+<div class="preview-wrap">
+
+<img
+  class="preview"
+  id="old-preview"
+  alt="Old Church Camera live view">
+
+</div>
+
+<div class="preview-note">
+Live preview
+</div>
+
+
+<div class="columns">
+
+
+<!-- LEFT -->
+
+<div class="column">
+
+<button
+  class="preset left"
+  onclick="recall('old',4)">
+  Main
+  <span class="number">Preset 4</span>
+</button>
+
+</div>
+
+
+<!-- CENTER -->
+
+<div class="column">
+
+<button
+  class="preset center"
+  onclick="recall('old',9)">
+  Gospel
+  <span class="number">Preset 9</span>
+</button>
+
+</div>
+
+
+<!-- RIGHT -->
+
+<div class="column">
+
+<button
+  class="preset right"
+  onclick="recall('old',1)">
+  Sermon
+  <span class="number">Preset 1</span>
+</button>
+
+</div>
+
+</div>
+
+
+<div id="old-status" class="status">
+Ready
+</div>
+
+</section>
+
+</div>
+
+
+<div class="footer">
+Panasonic PTZ Camera Control
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   CAMERA CONFIGURATION
+   ========================================================= */
+
+const cameras = {
+
+  new:{
+    ip:"192.168.10.30",
+    status:"new-status"
+  },
+
+  old:{
+    ip:"192.168.10.28",
+    status:"old-status"
+  }
+
+};
+
+
+/* =========================================================
+   PREVIEW CONFIGURATION
+   ========================================================= */
+
+const previewFeeds = {
+
+  new:{
+    ip:"192.168.10.30",
+    element:"new-preview"
+  },
+
+  old:{
+    ip:"192.168.10.28",
+    element:"old-preview"
+  }
+
+};
+
+
+/* =========================================================
+   REFRESH CAMERA PREVIEW
+   ========================================================= */
+
+function refreshPreview(which){
+
+  const feed = previewFeeds[which];
+
+  const img =
+    document.getElementById(feed.element);
+
+  img.src =
+    `http://${feed.ip}/cgi-bin/camera?resolution=640x360&quality=standard&${Date.now()}`;
+}
+
+
+/* =========================================================
+   START PREVIEWS
+   ========================================================= */
+
+function startPreviews(){
+
+  Object.keys(previewFeeds).forEach(which => {
+
+    refreshPreview(which);
+
+    setInterval(
+      () => refreshPreview(which),
+      1000
+    );
+
+  });
+
+}
+
+startPreviews();
+
+
+/* =========================================================
+   PRESET RECALL
+   ========================================================= */
+
+function recall(which,n){
+
+  const cam = cameras[which];
+
+  const code =
+    String(n - 1).padStart(2,"0");
+
+  const url =
+    `http://${cam.ip}/cgi-bin/aw_ptz?cmd=%23R${code}&res=1`;
+
+  document.getElementById(
+    cam.status
+  ).textContent =
+    `Calling preset ${n}...`;
+
+  const img = new Image();
+
+  img.onload = () => {
+
+    document.getElementById(
+      cam.status
+    ).textContent =
+      `Preset ${n} sent.`;
+
+  };
+
+  img.onerror = () => {
+
+    document.getElementById(
+      cam.status
+    ).textContent =
+      `Preset ${n} sent.`;
+
+  };
+
+  img.src =
+    url +
+    `&t=${Date.now()}`;
+
+}
+
 </script>
 
 </body>
