@@ -186,48 +186,6 @@ h1{
   background:#ffd2d2;
 }
 
-/* =========================================================
-   PRESET TYPE COLOR CODING
-   Keeps LEFT / CENTER / RIGHT column colors,
-   while adding a subtle color cue for the preset type.
-   ========================================================= */
-
-.preset{
-  position:relative;
-  overflow:hidden;
-}
-
-/* ALTAR = blue accent */
-.preset.altar{
-  box-shadow:inset 0 4px 0 #4da3ff, 0 2px 6px rgba(0,0,0,.12);
-}
-
-/* GOSPEL = green accent */
-.preset.gospel{
-  box-shadow:inset 0 4px 0 #42b86b, 0 2px 6px rgba(0,0,0,.12);
-}
-
-/* SERMON = gold/orange accent */
-.preset.sermon{
-  box-shadow:inset 0 4px 0 #e0a23b, 0 2px 6px rgba(0,0,0,.12);
-}
-
-/* Keep the type accents visible on phone layouts */
-@media (max-width:799px){
-  .preset.altar{
-    box-shadow:inset 0 3px 0 #4da3ff, 0 1px 3px rgba(0,0,0,.10);
-  }
-
-  .preset.gospel{
-    box-shadow:inset 0 3px 0 #42b86b, 0 1px 3px rgba(0,0,0,.10);
-  }
-
-  .preset.sermon{
-    box-shadow:inset 0 3px 0 #e0a23b, 0 1px 3px rgba(0,0,0,.10);
-  }
-}
-
-
 
 /* =========================================================
    STATUS / FOOTER
@@ -707,21 +665,21 @@ Live preview
 <div class="column">
 
 <button
-  class="preset left altar"
+  class="preset left"
   onclick="recall('new',10)">
   Left Altar
   <span class="number">Preset 10</span>
 </button>
 
 <button
-  class="preset left gospel"
+  class="preset left"
   onclick="recall('new',16)">
   Left Altar Gospel
   <span class="number">Preset 16</span>
 </button>
 
 <button
-  class="preset left sermon"
+  class="preset left"
   onclick="recall('new',13)">
   Left Altar Sermon
   <span class="number">Preset 13</span>
@@ -735,21 +693,21 @@ Live preview
 <div class="column">
 
 <button
-  class="preset center altar"
+  class="preset center"
   onclick="recall('new',5)">
   Main Altar
   <span class="number">Preset 5</span>
 </button>
 
 <button
-  class="preset center gospel"
+  class="preset center"
   onclick="recall('new',9)">
   Main Gospel
   <span class="number">Preset 9</span>
 </button>
 
 <button
-  class="preset center sermon"
+  class="preset center"
   onclick="recall('new',1)">
   Main Altar Sermon
   <span class="number">Preset 1</span>
@@ -763,7 +721,7 @@ Live preview
 <div class="column">
 
 <button
-  class="preset right altar"
+  class="preset right"
   onclick="recall('new',11)">
   Right Altar
   <span class="number">Preset 11</span>
@@ -815,7 +773,7 @@ Live preview
 <div class="column">
 
 <button
-  class="preset left altar"
+  class="preset left"
   onclick="recall('old',4)">
   Main
   <span class="number">Preset 4</span>
@@ -829,7 +787,7 @@ Live preview
 <div class="column">
 
 <button
-  class="preset center gospel"
+  class="preset center"
   onclick="recall('old',9)">
   Gospel
   <span class="number">Preset 9</span>
@@ -843,7 +801,7 @@ Live preview
 <div class="column">
 
 <button
-  class="preset right sermon"
+  class="preset right"
   onclick="recall('old',1)">
   Sermon
   <span class="number">Preset 1</span>
