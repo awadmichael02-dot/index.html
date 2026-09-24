@@ -1695,6 +1695,134 @@ body{
     font-size:9px;
   }
 }
+/* =====================================================
+   LIGHT / DARK MODE
+===================================================== */
+
+:root{
+  color-scheme: light;
+}
+
+body{
+  background:#f1f3f6;
+  color:#182235;
+  transition:
+    background-color .25s ease,
+    color .25s ease;
+}
+
+.theme-toggle{
+  margin-left:auto;
+  display:flex;
+  align-items:center;
+  gap:7px;
+
+  border:1px solid #d5d9e0;
+  background:#ffffff;
+  color:#182235;
+
+  border-radius:999px;
+  padding:8px 13px;
+
+  font-family:inherit;
+  font-size:13px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:
+    background-color .25s ease,
+    color .25s ease,
+    border-color .25s ease;
+}
+
+.theme-toggle:hover{
+  background:#f1f3f6;
+}
+
+#theme-icon{
+  font-size:17px;
+  line-height:1;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode{
+  background:#101318;
+  color:#f1f3f7;
+}
+
+body.dark-mode .app{
+  background:#101318;
+}
+
+body.dark-mode .header{
+  color:#f1f3f7;
+}
+
+body.dark-mode .header-text p{
+  color:#aeb6c4;
+}
+
+body.dark-mode .camera{
+  background:#1a1f27;
+  border-color:#2c333e;
+  box-shadow:0 8px 24px rgba(0,0,0,.25);
+}
+
+body.dark-mode .camera h2{
+  color:#f1f3f7;
+}
+
+body.dark-mode .ip{
+  color:#9da7b5;
+}
+
+body.dark-mode .preview-wrap{
+  background:#0b0e12;
+  border-color:#303744;
+}
+
+body.dark-mode .preview-note{
+  color:#8f99a8;
+}
+
+body.dark-mode .status{
+  background:#252b34;
+  color:#aeb7c5;
+}
+
+body.dark-mode .footer{
+  color:#858f9f;
+}
+
+body.dark-mode .theme-toggle{
+  background:#252b34;
+  border-color:#3a424f;
+  color:#f1f3f7;
+}
+
+body.dark-mode .theme-toggle:hover{
+  background:#303743;
+}
+
+
+/* Keep the preset colors visible in dark mode */
+
+body.dark-mode .preset.left{
+  background:#182b43;
+}
+
+body.dark-mode .preset.center{
+  background:#18382a;
+}
+
+body.dark-mode .preset.right{
+  background:#3d2024;
+}      
 </style>
 
 </head>
@@ -1706,16 +1834,26 @@ body{
   <!-- HEADER -->
   <header class="header">
 
-    <div class="header-icon" aria-hidden="true">
-      <img src="./church-icon.png" alt="">
-    </div>
+  <div class="header-icon" aria-hidden="true">
+    <img src="./church-icon.png" alt="">
+  </div>
 
-    <div class="header-text">
-      <h1>Church Cameras</h1>
-      <p>Panasonic PTZ Camera Control</p>
-    </div>
+  <div class="header-text">
+    <h1>Church Cameras</h1>
+    <p>Panasonic PTZ Camera Control</p>
+  </div>
 
-  </header>
+  <button
+    id="theme-toggle"
+    class="theme-toggle"
+    type="button"
+    onclick="toggleTheme()"
+    aria-label="Toggle dark mode">
+    <span id="theme-icon">☾</span>
+    <span id="theme-label">Dark</span>
+  </button>
+
+</header>
 
 
   <!-- CAMERA CONTAINER -->
@@ -2241,7 +2379,57 @@ function recall(which,n){
     url + `&t=${Date.now()}`;
 
 }
+/* =====================================================
+   LIGHT / DARK MODE
+===================================================== */
 
+function setTheme(theme){
+
+  const isDark = theme === "dark";
+
+  document.body.classList.toggle(
+    "dark-mode",
+    isDark
+  );
+
+  document.documentElement.style.colorScheme =
+    isDark ? "dark" : "light";
+
+  document.getElementById("theme-icon").textContent =
+    isDark ? "☀" : "☾";
+
+  document.getElementById("theme-label").textContent =
+    isDark ? "Light" : "Dark";
+
+  localStorage.setItem(
+    "church-camera-theme",
+    theme
+  );
+}
+
+
+function toggleTheme(){
+
+  const isDark =
+    document.body.classList.contains("dark-mode");
+
+  setTheme(
+    isDark ? "light" : "dark"
+  );
+
+}
+
+
+/* Load saved theme */
+
+const savedTheme =
+  localStorage.getItem("church-camera-theme");
+
+if(savedTheme){
+  setTheme(savedTheme);
+}else{
+  setTheme("light");
+}
 </script>
 
 </body>
