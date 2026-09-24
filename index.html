@@ -1911,6 +1911,16 @@ body.dark-mode,
 body.dark-mode .app{
   background:var(--page-bg) !important;
 }
+      /* Header church icon */
+.header-icon img{
+  filter:none;
+  transition:filter .25s ease;
+}
+
+/* White icon in dark mode */
+body.dark-mode .header-icon img{
+  filter:invert(100%);
+}
 </style>
 
 </head>
