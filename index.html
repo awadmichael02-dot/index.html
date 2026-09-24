@@ -707,8 +707,171 @@ body{
    iPHONE PORTRAIT
 ===================================================== */
 
+/* =====================================================
+   iPHONE PORTRAIT — COMPACT / NO SCROLL
+===================================================== */
+
 @media screen and (max-width:799px)
        and (orientation:portrait){
+
+  html,
+  body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+  }
+
+  body{
+    padding:6px 7px;
+  }
+
+  .app{
+    width:100%;
+    max-width:none;
+  }
+
+  /* HEADER */
+  .header{
+    margin:0 4px 6px;
+    gap:7px;
+  }
+
+  .header-icon{
+    width:34px;
+    height:34px;
+    flex-basis:34px;
+  }
+
+  .header-icon img{
+    width:37px;
+    height:37px;
+  }
+
+  .header-text h1{
+    font-size:20px;
+    letter-spacing:-.4px;
+  }
+
+  .header-text p{
+    font-size:9px;
+    margin-top:2px;
+  }
+
+  /* CAMERAS */
+  .camera-container{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+  }
+
+  .camera{
+    padding:7px;
+    border-radius:11px;
+  }
+
+  /* CAMERA TITLE */
+  .camera-top{
+    margin-bottom:5px;
+  }
+
+  .camera-title h2{
+    font-size:15px;
+  }
+
+  .ip{
+    margin-top:2px;
+    font-size:8px;
+  }
+
+  .online{
+    padding:4px 7px;
+    gap:4px;
+    font-size:8px;
+  }
+
+  .online-dot{
+    width:6px;
+    height:6px;
+  }
+
+  /* SMALLER PREVIEW */
+  .preview-wrap{
+    width:48%;
+    max-width:190px;
+    margin:0 auto 6px;
+    border-width:2px;
+    border-radius:6px;
+  }
+
+  /* NEW CAMERA COLUMNS */
+  .columns{
+    gap:3px;
+  }
+
+  .column{
+    gap:3px;
+  }
+
+  .column-label{
+    height:25px;
+    border-radius:6px 6px 4px 4px;
+    font-size:9px;
+  }
+
+  /* BUTTONS */
+  .preset{
+    min-height:43px;
+    height:43px;
+    padding:4px 3px;
+    border-radius:6px;
+    gap:3px;
+  }
+
+  .preset-icon{
+    width:18px;
+    height:18px;
+    flex-basis:18px;
+  }
+
+  .preset-icon img,
+  .preset-icon svg{
+    width:17px;
+    height:17px;
+  }
+
+  .preset-name{
+    font-size:8px;
+    line-height:1;
+  }
+
+  .number{
+    display:none;
+  }
+
+  /* OLD CAMERA */
+  .old-presets{
+    gap:3px;
+  }
+
+  .old-presets .preset{
+    min-height:43px;
+    height:43px;
+  }
+
+  /* STATUS */
+  .status{
+    min-height:18px;
+    height:18px;
+    margin-top:5px;
+    border-radius:5px;
+    font-size:7px;
+  }
+
+  /* HIDE FOOTER */
+  .footer{
+    display:none;
+  }
+}{
 
   html,
   body{
