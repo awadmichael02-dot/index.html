@@ -35,7 +35,7 @@ body{padding:18px}.app{width:100%;max-width:1500px;margin:auto}
 </style><body>
 <div class="app">
 <header class="header">
-  <div class="header-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke-width="3"><path d="M10 56V25L32 7l22 18v31"/><path d="M23 56V39h18v17"/><path d="M32 7v13"/><path d="M26 15h12"/><path d="M32 29v9"/><path d="M27.5 33.5h9"/><path d="M10 56h44"/></svg></div>
+  <div class="header-icon" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke-width="3"><path d="M32 1v6"/><path d="M27.5 4h9"/><path d="M10 56V25L32 7l22 18v31"/><path d="M23 56V39h18v17"/><path d="M10 56h44"/></svg></div>
   <div class="header-text"><h1>Church Cameras</h1><p>Panasonic PTZ Camera Control</p></div>
 </header>
 <div class="camera-container">
@@ -44,17 +44,17 @@ body{padding:18px}.app{width:100%;max-width:1500px;margin:auto}
   <div class="preview-wrap"><img class="preview" id="new-preview" alt="New Church Camera live view"></div>
   <div class="columns">
     <div class="column"><div class="column-label left">Left</div>
-      <button class="preset left" onclick="recall('new',10)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/><path d="M16 5v6"/></svg></span><span class="preset-text"><span class="preset-name">Left Altar</span><span class="number">Preset 10</span></span></button>
+      <button class="preset left" onclick="recall('new',10)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M16 1v4"/><path d="M13.5 3h5"/><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/></svg></span><span class="preset-text"><span class="preset-name">Left Altar</span><span class="number">Preset 10</span></span></button>
       <button class="preset left" onclick="recall('new',16)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/><path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/><path d="M16 8v19"/></svg></span><span class="preset-text"><span class="preset-name">Left Altar Gospel</span><span class="number">Preset 16</span></span></button>
       <button class="preset left" onclick="recall('new',13)"><span class="preset-icon"><svg viewBox="0 0 32 32"><rect x="12" y="5" width="8" height="15" rx="4"/><path d="M8 15a8 8 0 0 0 16 0"/><path d="M16 23v5"/><path d="M11 28h10"/></svg></span><span class="preset-text"><span class="preset-name">Left Altar Sermon</span><span class="number">Preset 13</span></span></button>
     </div>
     <div class="column"><div class="column-label center">Center</div>
-      <button class="preset center" onclick="recall('new',5)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/><path d="M16 5v6"/></svg></span><span class="preset-text"><span class="preset-name">Main Altar</span><span class="number">Preset 5</span></span></button>
+      <button class="preset center" onclick="recall('new',5)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M16 1v4"/><path d="M13.5 3h5"/><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/></svg></span><span class="preset-text"><span class="preset-name">Main Altar</span><span class="number">Preset 5</span></span></button>
       <button class="preset center" onclick="recall('new',9)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/><path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/><path d="M16 8v19"/></svg></span><span class="preset-text"><span class="preset-name">Main Gospel</span><span class="number">Preset 9</span></span></button>
       <button class="preset center" onclick="recall('new',1)"><span class="preset-icon"><svg viewBox="0 0 32 32"><rect x="12" y="5" width="8" height="15" rx="4"/><path d="M8 15a8 8 0 0 0 16 0"/><path d="M16 23v5"/><path d="M11 28h10"/></svg></span><span class="preset-text"><span class="preset-name">Main Altar Sermon</span><span class="number">Preset 1</span></span></button>
     </div>
     <div class="column"><div class="column-label right">Right</div>
-      <button class="preset right" onclick="recall('new',11)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/><path d="M16 5v6"/></svg></span><span class="preset-text"><span class="preset-name">Right Altar</span><span class="number">Preset 11</span></span></button>
+      <button class="preset right" onclick="recall('new',11)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M16 1v4"/><path d="M13.5 3h5"/><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/></svg></span><span class="preset-text"><span class="preset-name">Right Altar</span><span class="number">Preset 11</span></span></button>
     </div>
   </div>
   <div id="new-status" class="status">Ready</div>
@@ -63,7 +63,7 @@ body{padding:18px}.app{width:100%;max-width:1500px;margin:auto}
   <div class="camera-top"><div class="camera-title"><h2>Old Church Camera</h2><div class="ip">192.168.10.28</div></div><div id="old-online" class="online"><span class="online-dot"></span><span>Online</span></div></div>
   <div class="preview-wrap"><img class="preview" id="old-preview" alt="Old Church Camera live view"></div>
   <div class="columns">
-    <div class="column"><div class="column-label left">Left</div><button class="preset left" onclick="recall('old',4)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/><path d="M16 5v6"/></svg></span><span class="preset-text"><span class="preset-name">Main</span><span class="number">Preset 4</span></span></button></div>
+    <div class="column"><div class="column-label left">Left</div><button class="preset left" onclick="recall('old',4)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M16 1v4"/><path d="M13.5 3h5"/><path d="M5 28V13l11-8 11 8v15"/><path d="M11 28V18h10v10"/></svg></span><span class="preset-text"><span class="preset-name">Main</span><span class="number">Preset 4</span></span></button></div>
     <div class="column"><div class="column-label center">Center</div><button class="preset center" onclick="recall('old',9)"><span class="preset-icon"><svg viewBox="0 0 32 32"><path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/><path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/><path d="M16 8v19"/></svg></span><span class="preset-text"><span class="preset-name">Gospel</span><span class="number">Preset 9</span></span></button></div>
     <div class="column"><div class="column-label right">Right</div><button class="preset right" onclick="recall('old',1)"><span class="preset-icon"><svg viewBox="0 0 32 32"><rect x="12" y="5" width="8" height="15" rx="4"/><path d="M8 15a8 8 0 0 0 16 0"/><path d="M16 23v5"/><path d="M11 28h10"/></svg></span><span class="preset-text"><span class="preset-name">Sermon</span><span class="number">Preset 1</span></span></button></div>
   </div>
