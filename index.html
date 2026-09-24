@@ -1903,13 +1903,11 @@ body,
   background:var(--page-bg) !important;
 }
 
-body.dark-mode{
+html.dark-mode,
+html.dark-mode body,
+html.dark-mode .app{
   --page-bg:#101318;
-}
-
-body.dark-mode,
-body.dark-mode .app{
-  background:var(--page-bg) !important;
+  background:#101318 !important;
 }
       /* Header church icon */
 .header-icon img{
@@ -1920,6 +1918,14 @@ body.dark-mode .app{
 /* White icon in dark mode */
 body.dark-mode .header-icon img{
   filter:invert(100%);
+}
+      .header-icon img{
+  filter:none !important;
+}
+
+body.dark-mode .header-icon img,
+html.dark-mode .header-icon img{
+  filter:brightness(0) invert(1) !important;
 }
 </style>
 
@@ -2485,10 +2491,8 @@ function setTheme(theme){
 
   const isDark = theme === "dark";
 
-  document.body.classList.toggle(
-    "dark-mode",
-    isDark
-  );
+  document.body.classList.toggle("dark-mode", isDark);
+document.documentElement.classList.toggle("dark-mode", isDark);
 
   document.getElementById("theme-icon").textContent =
   isDark ? "☀︎" : "☾︎";
