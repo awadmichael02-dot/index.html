@@ -1890,33 +1890,26 @@ body.dark-mode .preset img{
   filter:brightness(0) invert(1);
 }
 /* =====================================================
-   FINAL PAGE BACKGROUND
+   FINAL THEME BACKGROUND — USE THIS ONLY
 ===================================================== */
 
-/* LIGHT MODE */
+:root{
+  --page-bg:#f1f3f6;
+}
+
 html,
-body{
-  background:#f1f3f6 !important;
-}
-
-body{
-  min-height:100vh;
-}
-
+body,
 .app{
-  min-height:100vh;
-  background:#f1f3f6 !important;
+  background:var(--page-bg) !important;
 }
 
-
-/* DARK MODE */
-html:has(body.dark-mode),
 body.dark-mode{
-  background:#101318 !important;
+  --page-bg:#101318;
 }
 
+body.dark-mode,
 body.dark-mode .app{
-  background:#101318 !important;
+  background:var(--page-bg) !important;
 }
 </style>
 
