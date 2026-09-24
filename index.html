@@ -1859,7 +1859,35 @@ body.dark-mode .preset.center{
 
 body.dark-mode .preset.right{
   background:#3d2024;
-}      
+}  
+/* =====================================================
+   DARK MODE — PRESET TEXT CONTRAST FIX
+===================================================== */
+
+body.dark-mode .preset{
+  color:#ffffff !important;
+}
+
+body.dark-mode .preset .preset-name{
+  color:#ffffff !important;
+}
+
+body.dark-mode .preset .number{
+  color:#dbe2ec !important;
+}
+
+body.dark-mode .preset svg{
+  stroke:#ffffff !important;
+  fill:none !important;
+}
+
+body.dark-mode .preset svg path{
+  stroke:#ffffff !important;
+}
+
+body.dark-mode .preset img{
+  filter:brightness(0) invert(1);
+}
 </style>
 
 </head>
@@ -2169,8 +2197,8 @@ body.dark-mode .preset.right{
           <span class="preset-icon">
 
             <svg viewBox="0 0 32 32">
-  <path d="M4 7c4-3 8-3 12 0v20c-4-3 8-3-12 0V7Z"/>
-  <path d="M28 7c-4-3-8-3-12 0v20c4 8-3 8-3 12 0V7Z"/>
+  <path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
+  <path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
   <path d="M16 8v19"/>
 </svg>
             </svg>
