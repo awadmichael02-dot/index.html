@@ -181,17 +181,17 @@ body{padding:18px}
   .header-text h1{font-size:20px;letter-spacing:-.4px}
   .header-text p{font-size:10px;margin-top:2px}
   .camera-container{flex:1;min-height:0;display:flex;flex-direction:column;gap:6px}
-  .camera{flex:1;min-height:0;padding:6px;border-radius:10px;display:flex;flex-direction:column}
+  .camera{flex:1 1 auto;min-height:0;padding:6px;border-radius:10px;display:flex;flex-direction:column}
   .camera-top{margin-bottom:4px}
   .camera-title h2{font-size:14px;letter-spacing:-.2px}
   .ip{margin-top:2px;font-size:8px}
   .online{padding:4px 7px;gap:4px;font-size:8px}
   .online-dot{width:6px;height:6px}
-  .preview-wrap{flex:0 0 auto;width:50%;max-width:210px;margin:0 auto 4px;border-width:2px;border-radius:6px}
-  .columns{flex:1;min-height:0;gap:3px}
+  .preview-wrap{flex:1 1 0;min-height:0;width:100%;max-width:none;aspect-ratio:auto;margin:0 0 4px;border-width:2px;border-radius:6px}
+  .columns{flex:0 0 auto;gap:3px}
   .column{gap:3px}
   .column-label{height:22px;border-radius:6px 6px 4px 4px;font-size:9px}
-  .preset{flex:1;min-height:72px;height:72px;padding:5px 3px;border-radius:8px;gap:3px}
+  .preset{flex:0 0 auto;min-height:0;height:54px;padding:4px 3px;border-radius:8px;gap:3px}
   .preset-icon{width:23px;height:23px;flex-basis:23px}
   .preset-icon svg{width:22px;height:22px}
   .preset-text{text-align:center}
@@ -248,16 +248,14 @@ body{padding:18px}
 
   <!-- Church: cross on the steeple, side wings, arched door -->
   <symbol id="i-church" viewBox="0 0 64 64">
-    <g stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
-      <path d="M32 3v10"/>
-      <path d="M27.5 7.5h9"/>
-      <path d="M23 27l9-14 9 14"/>
-      <path d="M23 27v29"/>
-      <path d="M41 27v29"/>
-      <path d="M23 38H10v18"/>
-      <path d="M41 38h13v18"/>
-      <path d="M6 56h52"/>
-      <path d="M28 56V48a4 4 0 0 1 8 0v8"/>
+    <g stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M32 4v15"/>
+      <path d="M25.5 11h13"/>
+      <path d="M7 39L32 19l25 20"/>
+      <path d="M12 35v23"/>
+      <path d="M52 35v23"/>
+      <path d="M5 58h54"/>
+      <path d="M24 58V43h16v15"/>
     </g>
   </symbol>
 
