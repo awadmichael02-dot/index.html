@@ -586,19 +586,19 @@ body{
 }
 
 /* =====================================================
-   LAPTOP / DESKTOP — COMPACT NO-SCROLL
+   LAPTOP / DESKTOP — ONE SCREEN
 ===================================================== */
 
 @media screen and (min-width:1200px){
 
   html,
   body{
+    width:100%;
     min-height:100%;
-    overflow:hidden;
   }
 
   body{
-    padding:14px 20px;
+    padding:10px 20px;
   }
 
   .app{
@@ -608,58 +608,58 @@ body{
 
   /* HEADER */
   .header{
-    margin:0 8px 12px;
-    gap:12px;
+    margin:0 8px 8px;
+    gap:10px;
   }
 
   .header-icon{
-    width:52px;
-    height:52px;
-    flex-basis:52px;
+    width:46px;
+    height:46px;
+    flex-basis:46px;
   }
 
   .header-icon img{
-    width:56px;
-    height:56px;
+    width:50px;
+    height:50px;
   }
 
   .header-text h1{
-    font-size:31px;
+    font-size:29px;
     letter-spacing:-.6px;
   }
 
   .header-text p{
-    font-size:15px;
-    margin-top:3px;
+    font-size:14px;
+    margin-top:2px;
   }
 
-  /* CAMERA CARDS */
+  /* TWO CAMERA CARDS */
   .camera-container{
     gap:14px;
   }
 
   .camera{
-    padding:12px;
-    border-radius:15px;
+    padding:11px;
+    border-radius:14px;
   }
 
-  /* CAMERA HEADER */
+  /* CAMERA TITLE */
   .camera-top{
-    margin-bottom:7px;
+    margin-bottom:5px;
   }
 
   .camera-title h2{
-    font-size:21px;
+    font-size:20px;
   }
 
   .ip{
-    margin-top:3px;
-    font-size:12px;
+    margin-top:2px;
+    font-size:11px;
   }
 
   .online{
-    padding:6px 10px;
-    font-size:11px;
+    padding:5px 9px;
+    font-size:10px;
     gap:5px;
   }
 
@@ -668,18 +668,18 @@ body{
     height:7px;
   }
 
-  /* SMALLER PREVIEW */
+  /* MUCH SMALLER PREVIEW */
   .preview-wrap{
-    width:58%;
-    max-width:390px;
-    margin:0 auto 8px;
+    width:50%;
+    max-width:310px;
+    margin:0 auto 7px;
     border-width:2px;
-    border-radius:8px;
+    border-radius:7px;
   }
 
-  /* NEW CAMERA COLUMNS */
+  /* NEW CAMERA */
   .columns{
-    gap:6px;
+    gap:5px;
   }
 
   .column{
@@ -687,30 +687,30 @@ body{
   }
 
   .column-label{
-    height:34px;
-    border-radius:8px 8px 5px 5px;
+    height:32px;
+    border-radius:7px 7px 4px 4px;
     font-size:13px;
   }
 
-  /* PRESET BUTTONS */
+  /* BUTTONS */
   .preset{
-    min-height:57px;
-    height:57px;
-    padding:7px 6px;
-    border-radius:8px;
-    gap:6px;
+    min-height:55px;
+    height:55px;
+    padding:6px 5px;
+    border-radius:7px;
+    gap:5px;
   }
 
   .preset-icon{
-    width:25px;
-    height:25px;
-    flex-basis:25px;
+    width:24px;
+    height:24px;
+    flex-basis:24px;
   }
 
   .preset-icon img,
   .preset-icon svg{
-    width:24px;
-    height:24px;
+    width:23px;
+    height:23px;
   }
 
   .preset-name{
@@ -720,26 +720,26 @@ body{
 
   .number{
     margin-top:2px;
-    font-size:9px;
+    font-size:8px;
   }
 
   /* OLD CAMERA */
   .old-presets{
-    gap:6px;
+    gap:5px;
   }
 
   .old-presets .preset{
-    min-height:57px;
-    height:57px;
+    min-height:55px;
+    height:55px;
   }
 
   /* STATUS */
   .status{
-    min-height:27px;
-    height:27px;
-    margin-top:7px;
-    border-radius:7px;
-    font-size:10px;
+    min-height:24px;
+    height:24px;
+    margin-top:6px;
+    border-radius:6px;
+    font-size:9px;
   }
 
   .footer{
@@ -1537,7 +1537,7 @@ body{
 
             <svg viewBox="0 0 32 32">
               <path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
-              <path d="M28 7c-4-3 8-3-12 0v20c-4-3 8-3 12 0V7Z"/>
+              <path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
               <path d="M16 8v19"/>
             </svg>
 
