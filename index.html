@@ -1890,35 +1890,33 @@ body.dark-mode .preset img{
   filter:brightness(0) invert(1);
 }
 /* =====================================================
-   FINAL DARK PAGE BACKGROUND
+   FINAL PAGE BACKGROUND
 ===================================================== */
 
-html{
-  background:#101318 !important;
-  min-height:100%;
+/* LIGHT MODE */
+html,
+body{
+  background:#f1f3f6 !important;
 }
 
 body{
-  background:#101318 !important;
   min-height:100vh;
-  margin:0;
 }
 
+.app{
+  min-height:100vh;
+  background:#f1f3f6 !important;
+}
+
+
+/* DARK MODE */
+html:has(body.dark-mode),
 body.dark-mode{
   background:#101318 !important;
 }
 
-body.dark-mode::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:#101318;
-  z-index:-1;
-}
-
 body.dark-mode .app{
   background:#101318 !important;
-  min-height:100vh;
 }
 </style>
 
