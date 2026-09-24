@@ -1780,6 +1780,7 @@ body{
 #theme-icon{
   font-size:17px;
   line-height:1;
+  font-variant-emoji:text;
 }
 
 
@@ -1888,6 +1889,23 @@ body.dark-mode .preset svg path{
 body.dark-mode .preset img{
   filter:brightness(0) invert(1);
 }
+/* =====================================================
+   FINAL PAGE BACKGROUND FIX
+===================================================== */
+
+html,
+body{
+  background:#101318 !important;
+}
+
+body.dark-mode{
+  background:#101318 !important;
+}
+
+.app{
+  min-height:100vh;
+  background:#101318;
+}
 </style>
 
 </head>
@@ -1914,7 +1932,7 @@ body.dark-mode .preset img{
     type="button"
     onclick="toggleTheme()"
     aria-label="Toggle dark mode">
-    <span id="theme-icon">☾</span>
+    <span id="theme-icon">☾︎</span>
     <span id="theme-label">Dark</span>
   </button>
 
@@ -2457,8 +2475,8 @@ function setTheme(theme){
     isDark
   );
 
-  document.documentElement.style.colorScheme =
-    isDark ? "dark" : "light";
+  document.getElementById("theme-icon").textContent =
+  isDark ? "☀︎" : "☾︎";
 
   document.getElementById("theme-icon").textContent =
     isDark ? "☀" : "☾";
