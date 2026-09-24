@@ -1890,21 +1890,35 @@ body.dark-mode .preset img{
   filter:brightness(0) invert(1);
 }
 /* =====================================================
-   FINAL PAGE BACKGROUND FIX
+   FINAL DARK PAGE BACKGROUND
 ===================================================== */
 
-html,
+html{
+  background:#101318 !important;
+  min-height:100%;
+}
+
 body{
   background:#101318 !important;
+  min-height:100vh;
+  margin:0;
 }
 
 body.dark-mode{
   background:#101318 !important;
 }
 
-.app{
-  min-height:100vh;
+body.dark-mode::before{
+  content:"";
+  position:fixed;
+  inset:0;
   background:#101318;
+  z-index:-1;
+}
+
+body.dark-mode .app{
+  background:#101318 !important;
+  min-height:100vh;
 }
 </style>
 
