@@ -1889,41 +1889,23 @@ body.dark-mode .preset svg path{
 body.dark-mode .preset img{
   filter:brightness(0) invert(1);
 }
-/* =====================================================
-   FINAL THEME BACKGROUND — USE THIS ONLY
-===================================================== */
-
-:root{
-  --page-bg:#f1f3f6;
-}
+/* FINAL THEME FIX */
 
 html,
-body,
-.app{
-  background:var(--page-bg) !important;
+body{
+  background:#f1f3f6 !important;
 }
 
 html.dark-mode,
-html.dark-mode body,
-html.dark-mode .app{
-  --page-bg:#101318;
+html.dark-mode body{
   background:#101318 !important;
 }
-      /* Header church icon */
-.header-icon img{
-  filter:none;
-  transition:filter .25s ease;
-}
 
-/* White icon in dark mode */
-body.dark-mode .header-icon img{
-  filter:invert(100%);
-}
-      .header-icon img{
+/* Header church icon */
+.header-icon img{
   filter:none !important;
 }
 
-body.dark-mode .header-icon img,
 html.dark-mode .header-icon img{
   filter:brightness(0) invert(1) !important;
 }
@@ -2240,7 +2222,7 @@ html.dark-mode .header-icon img{
   <path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
   <path d="M16 8v19"/>
 </svg>
-            </svg>
+           
 
           </span>
 
