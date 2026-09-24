@@ -268,7 +268,7 @@ body{
 }
 
 
-/* LEFT BUTTONS = BLUE */
+/* LEFT = BLUE */
 
 .preset.left{
   background:#dcebff;
@@ -276,7 +276,7 @@ body{
 }
 
 
-/* CENTER BUTTONS = GREEN */
+/* CENTER = GREEN */
 
 .preset.center{
   background:#dff6e6;
@@ -284,7 +284,7 @@ body{
 }
 
 
-/* RIGHT BUTTONS = RED */
+/* RIGHT = RED */
 
 .preset.right{
   background:#ffe0e0;
@@ -572,23 +572,26 @@ body{
     font-size:9px;
   }
 
+  /* BIGGER IPHONE BUTTONS */
+
   .preset{
     flex:1;
-    min-height:0;
-    padding:2px;
-    border-radius:6px;
-    gap:2px;
+    min-height:72px;
+    height:72px;
+    padding:5px 3px;
+    border-radius:8px;
+    gap:3px;
   }
 
   .preset-icon{
-    width:17px;
-    height:17px;
-    flex-basis:17px;
+    width:23px;
+    height:23px;
+    flex-basis:23px;
   }
 
   .preset-icon svg{
-    width:16px;
-    height:16px;
+    width:22px;
+    height:22px;
   }
 
   .preset-text{
@@ -596,8 +599,8 @@ body{
   }
 
   .preset-name{
-    font-size:8px;
-    line-height:1.05;
+    font-size:10px;
+    line-height:1.1;
   }
 
   .number{
@@ -824,11 +827,12 @@ body{
 
       <path d="M23 56V39h18v17"/>
 
-      <!-- Cross -->
-      <path d="M32 2v15"/>
-      <path d="M24 9.5h16"/>
+      <path d="M32 7v13"/>
+
+      <path d="M26 15h12"/>
 
       <path d="M32 29v9"/>
+
       <path d="M27.5 33.5h9"/>
 
       <path d="M10 56h44"/>
@@ -892,8 +896,6 @@ body{
   </div>
 
 
-  <!-- CAMERA PREVIEW -->
-
   <div class="preview-wrap">
 
     <img
@@ -903,8 +905,6 @@ body{
 
   </div>
 
-
-  <!-- PRESET COLUMNS -->
 
   <div class="columns">
 
@@ -918,7 +918,7 @@ body{
       </div>
 
 
-      <!-- ALTAR -->
+      <!-- ALTAR — PRESET 10 -->
 
       <button
         class="preset left"
@@ -930,18 +930,19 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M5 28V13l11-8 11 8v15"/>
-
-            <path
-              d="M11 28V18h10v10"/>
-
             <!-- Cross -->
-            <path
-              d="M16 2v9"/>
+            <path d="M16 3v8"/>
+            <path d="M12 7h8"/>
 
-            <path
-              d="M12 5.5h8"/>
+            <!-- Altar -->
+            <path d="M7 13h18"/>
+            <path d="M9 13v12"/>
+            <path d="M23 13v12"/>
+            <path d="M6 25h20"/>
+
+            <!-- Candles -->
+            <path d="M10 7v3"/>
+            <path d="M22 7v3"/>
 
           </svg>
 
@@ -962,7 +963,7 @@ body{
       </button>
 
 
-      <!-- GOSPEL -->
+      <!-- GOSPEL — PRESET 16 -->
 
       <button
         class="preset left"
@@ -974,14 +975,11 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
+            <path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
 
-            <path
-              d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
+            <path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
 
-            <path
-              d="M16 8v19"/>
+            <path d="M16 8v19"/>
 
           </svg>
 
@@ -1002,7 +1000,7 @@ body{
       </button>
 
 
-      <!-- SERMON -->
+      <!-- SERMON — PRESET 13 -->
 
       <button
         class="preset left"
@@ -1060,7 +1058,7 @@ body{
       </div>
 
 
-      <!-- ALTAR -->
+      <!-- ALTAR — PRESET 5 -->
 
       <button
         class="preset center"
@@ -1072,18 +1070,19 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M5 28V13l11-8 11 8v15"/>
-
-            <path
-              d="M11 28V18h10v10"/>
-
             <!-- Cross -->
-            <path
-              d="M16 2v9"/>
+            <path d="M16 3v8"/>
+            <path d="M12 7h8"/>
 
-            <path
-              d="M12 5.5h8"/>
+            <!-- Altar -->
+            <path d="M7 13h18"/>
+            <path d="M9 13v12"/>
+            <path d="M23 13v12"/>
+            <path d="M6 25h20"/>
+
+            <!-- Candles -->
+            <path d="M10 7v3"/>
+            <path d="M22 7v3"/>
 
           </svg>
 
@@ -1104,7 +1103,7 @@ body{
       </button>
 
 
-      <!-- GOSPEL -->
+      <!-- GOSPEL — PRESET 9 -->
 
       <button
         class="preset center"
@@ -1116,14 +1115,11 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
+            <path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
 
-            <path
-              d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
+            <path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
 
-            <path
-              d="M16 8v19"/>
+            <path d="M16 8v19"/>
 
           </svg>
 
@@ -1144,7 +1140,7 @@ body{
       </button>
 
 
-      <!-- SERMON -->
+      <!-- SERMON — PRESET 1 -->
 
       <button
         class="preset center"
@@ -1202,7 +1198,7 @@ body{
       </div>
 
 
-      <!-- ALTAR -->
+      <!-- ALTAR — PRESET 11 -->
 
       <button
         class="preset right"
@@ -1214,18 +1210,19 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M5 28V13l11-8 11 8v15"/>
-
-            <path
-              d="M11 28V18h10v10"/>
-
             <!-- Cross -->
-            <path
-              d="M16 2v9"/>
+            <path d="M16 3v8"/>
+            <path d="M12 7h8"/>
 
-            <path
-              d="M12 5.5h8"/>
+            <!-- Altar -->
+            <path d="M7 13h18"/>
+            <path d="M9 13v12"/>
+            <path d="M23 13v12"/>
+            <path d="M6 25h20"/>
+
+            <!-- Candles -->
+            <path d="M10 7v3"/>
+            <path d="M22 7v3"/>
 
           </svg>
 
@@ -1296,8 +1293,6 @@ body{
   </div>
 
 
-  <!-- CAMERA PREVIEW -->
-
   <div class="preview-wrap">
 
     <img
@@ -1307,8 +1302,6 @@ body{
 
   </div>
 
-
-  <!-- PRESET COLUMNS -->
 
   <div class="columns">
 
@@ -1331,18 +1324,19 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M5 28V13l11-8 11 8v15"/>
-
-            <path
-              d="M11 28V18h10v10"/>
-
             <!-- Cross -->
-            <path
-              d="M16 2v9"/>
+            <path d="M16 3v8"/>
+            <path d="M12 7h8"/>
 
-            <path
-              d="M12 5.5h8"/>
+            <!-- Altar -->
+            <path d="M7 13h18"/>
+            <path d="M9 13v12"/>
+            <path d="M23 13v12"/>
+            <path d="M6 25h20"/>
+
+            <!-- Candles -->
+            <path d="M10 7v3"/>
+            <path d="M22 7v3"/>
 
           </svg>
 
@@ -1383,14 +1377,11 @@ body{
 
           <svg viewBox="0 0 32 32">
 
-            <path
-              d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
+            <path d="M4 7c4-3 8-3 12 0v20c-4-3-8-3-12 0V7Z"/>
 
-            <path
-              d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
+            <path d="M28 7c-4-3-8-3-12 0v20c4-3 8-3 12 0V7Z"/>
 
-            <path
-              d="M16 8v19"/>
+            <path d="M16 8v19"/>
 
           </svg>
 
