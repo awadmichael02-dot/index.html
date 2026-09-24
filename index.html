@@ -586,33 +586,32 @@ body{
 }
 
 /* =====================================================
-   LAPTOP / DESKTOP — POLISHED LAYOUT
+   DESKTOP / LAPTOP — FLUID CAMERA CONTROL LAYOUT
 ===================================================== */
 
-@media screen and (min-width:1200px){
+@media screen and (min-width: 900px){
 
   body{
-    padding:clamp(10px, 1.5vh, 18px)
-            clamp(18px, 2vw, 32px);
+    padding:clamp(10px, 1.5vw, 24px);
   }
 
   .app{
     width:100%;
     max-width:1500px;
-    margin:auto;
+    margin:0 auto;
   }
 
-  /* ---------------- HEADER ---------------- */
+  /* HEADER */
 
   .header{
-    margin:0 8px clamp(10px, 1.8vh, 18px);
+    margin:0 8px clamp(12px, 1.5vw, 20px);
     gap:14px;
   }
 
   .header-icon{
     width:58px;
     height:58px;
-    flex-basis:58px;
+    flex:0 0 58px;
   }
 
   .header-icon img{
@@ -621,130 +620,168 @@ body{
   }
 
   .header-text h1{
-    font-size:clamp(30px, 3.8vh, 38px);
+    font-size:clamp(28px, 2.5vw, 38px);
     line-height:1;
   }
 
   .header-text p{
-    font-size:clamp(13px, 1.7vh, 16px);
+    font-size:clamp(12px, 1.15vw, 16px);
     margin-top:4px;
   }
 
-  /* ---------------- CAMERA CARDS ---------------- */
+
+  /* =================================================
+     CAMERA CARDS
+  ================================================= */
 
   .camera-container{
-    grid-template-columns:1fr 1fr;
-    gap:18px;
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) minmax(0, 1fr);
+    gap:clamp(14px, 1.5vw, 24px);
     align-items:start;
   }
 
   .camera{
-    padding:16px;
+    width:100%;
+    min-width:0;
+    padding:clamp(12px, 1.2vw, 18px);
     border-radius:18px;
   }
 
+
+  /* CAMERA HEADER */
+
   .camera-top{
-    margin-bottom:10px;
+    margin-bottom:clamp(8px, 1vw, 12px);
   }
 
   .camera-title h2{
-    font-size:clamp(21px, 2.7vh, 27px);
+    font-size:clamp(20px, 1.8vw, 27px);
+    line-height:1.1;
   }
 
   .ip{
     margin-top:3px;
-    font-size:12px;
+    font-size:clamp(10px, .9vw, 13px);
   }
 
   .online{
-    padding:7px 11px;
-    font-size:11px;
+    padding:6px 11px;
+    font-size:clamp(9px, .8vw, 12px);
   }
 
-  .online-dot{
-    width:7px;
-    height:7px;
-  }
 
-  /* ---------------- PREVIEW ---------------- */
+  /* =================================================
+     PREVIEW
+     
+     THIS IS THE IMPORTANT PART:
+     It can shrink, but NEVER grows beyond 400px.
+  ================================================= */
 
   .preview-wrap{
-    width:min(360px, 48%);
+    width:100%;
+    max-width:400px;
     aspect-ratio:16 / 9;
-    margin:0 auto 10px;
+    margin:0 auto clamp(8px, 1vw, 12px);
     border-width:2px;
-    border-radius:8px;
+    border-radius:9px;
+    overflow:hidden;
   }
 
-  /* ---------------- NEW CAMERA COLUMNS ---------------- */
+
+  /* =================================================
+     NEW CAMERA — LEFT / CENTER / RIGHT
+  ================================================= */
 
   .columns{
-    gap:7px;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:clamp(5px, .6vw, 8px);
   }
 
   .column{
-    gap:6px;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    gap:clamp(5px, .5vw, 7px);
   }
 
   .column-label{
-    height:38px;
+    height:clamp(34px, 3vw, 42px);
     border-radius:8px 8px 6px 6px;
-    font-size:14px;
+    font-size:clamp(11px, 1vw, 15px);
   }
 
-  /* ---------------- PRESET BUTTONS ---------------- */
+
+  /* =================================================
+     PRESET BUTTONS
+  ================================================= */
 
   .preset{
-    min-height:64px;
-    height:64px;
-    padding:7px 9px;
+    width:100%;
+    min-width:0;
+
+    height:clamp(58px, 5vw, 70px);
+    min-height:clamp(58px, 5vw, 70px);
+
+    padding:7px 8px;
+
     border-radius:8px;
-    gap:8px;
+    gap:clamp(5px, .6vw, 8px);
   }
 
   .preset-icon{
-    width:29px;
-    height:29px;
-    flex-basis:29px;
+    width:clamp(24px, 2.2vw, 30px);
+    height:clamp(24px, 2.2vw, 30px);
+    flex:0 0 clamp(24px, 2.2vw, 30px);
   }
 
   .preset-icon img,
   .preset-icon svg{
-    width:28px;
-    height:28px;
+    width:100%;
+    height:100%;
   }
 
   .preset-name{
-    font-size:13px;
+    font-size:clamp(11px, 1vw, 14px);
   }
 
   .number{
-    margin-top:3px;
-    font-size:10px;
+    margin-top:2px;
+    font-size:clamp(8px, .75vw, 11px);
   }
 
-  /* ---------------- OLD CAMERA ---------------- */
+
+  /* =================================================
+     OLD CAMERA — 3 BUTTONS IN ONE ROW
+  ================================================= */
 
   .old-presets{
-    gap:7px;
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:clamp(5px, .6vw, 8px);
   }
 
   .old-presets .preset{
-    min-height:64px;
-    height:64px;
+    height:clamp(58px, 5vw, 70px);
+    min-height:clamp(58px, 5vw, 70px);
   }
 
-  /* ---------------- STATUS ---------------- */
+
+  /* =================================================
+     STATUS
+  ================================================= */
 
   .status{
-    min-height:28px;
-    height:28px;
-    margin-top:8px;
-    border-radius:6px;
-    font-size:10px;
-  }
+    width:100%;
+    height:clamp(26px, 2.3vw, 32px);
+    min-height:clamp(26px, 2.3vw, 32px);
 
-  /* ---------------- FOOTER ---------------- */
+    margin-top:clamp(6px, .7vw, 10px);
+
+    border-radius:6px;
+    font-size:clamp(8px, .75vw, 11px);
+  }
 
   .footer{
     display:none;
