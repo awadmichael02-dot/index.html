@@ -2283,13 +2283,13 @@ html.dark-mode .header-icon img{
 const cameras = {
 
   new: {
-    ip:"192.168.10.30",
+    ip:"/new",
     status:"new-status",
     online:"new-online"
   },
 
   old: {
-    ip:"192.168.10.28",
+    ip:"/old",
     status:"old-status",
     online:"old-online"
   }
@@ -2304,12 +2304,12 @@ const cameras = {
 const previewFeeds = {
 
   new: {
-    ip:"192.168.10.30",
+    ip:"/new",
     element:"new-preview"
   },
 
   old: {
-    ip:"192.168.10.28",
+    ip:"/old",
     element:"old-preview"
   }
 
@@ -2384,7 +2384,7 @@ function refreshPreview(which){
 
 
   test.src =
-    `http://${feed.ip}/cgi-bin/camera?resolution=640x360&quality=standard&${Date.now()}`;
+    `${feed.path}/cgi-bin/camera?resolution=640x360&quality=standard&${Date.now()}`;
 
 }
 
@@ -2426,7 +2426,7 @@ function recall(which,n){
       .padStart(2,"0");
 
   const url =
-    `http://${cam.ip}/cgi-bin/aw_ptz?cmd=%23R${code}&res=1`;
+    `${cam.path}/cgi-bin/aw_ptz?cmd=%23R${code}&res=1`;
 
 
   document.getElementById(
